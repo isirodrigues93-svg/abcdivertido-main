@@ -438,7 +438,49 @@ p {
     width: fit-content;
 }
 
+/* Tipografia Responsiva para Mobile */
 @media (max-width: 780px) {
+    h1 {
+        font-size: 32px;
+        text-shadow: 1px 1px #ffd700;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-shadow: 1px 1px #fff;
+    }
+
+    .highlight h3 {
+        font-size: 20px;
+    }
+
+    .emotional-text h3,
+    .solution-content h3,
+    .bonus-section h3,
+    .testimonials-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .emotional-text p,
+    .solution-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 16px 32px;
+        font-size: 18px;
+    }
+
+    .btn.bonus-btn {
+        font-size: 18px;
+        padding: 18px 36px;
+    }
+
     .testimonial-cards {
         flex-direction: column;
     }
