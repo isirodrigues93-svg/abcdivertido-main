@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Material educativo ABC Divertido: Atividades para ensinar alfabetização de forma divertida e leve para crianças.">
+<title>ABC Divertido</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('imagens/DOBRA -1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+body::before {
+    content: "🌟 ⭐ ☁️ ❤️";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2em;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body::after {
+    content: "🌈 🎈 🦄";
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 2em;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-icon:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.floating-icon:nth-child(2) { top: 22%; right: 14%; animation-delay: 1.2s; }
+.floating-icon:nth-child(3) { bottom: 25%; left: 20%; animation-delay: 2.6s; }
+.floating-icon:nth-child(4) { bottom: 18%; right: 20%; animation-delay: 3.8s; }
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    50% { transform: translateY(-22px) scale(1.15); opacity: 1; }
+    100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 260px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    animation: popIn 1s ease-out;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 40px;
+    text-shadow: 2px 2px #ffd700;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #32cd32;
+    font-size: 30px;
+    text-shadow: 1px 1px #fff;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.box:nth-child(1) {
+    background: linear-gradient(45deg, #ffe4e1, #ffb6c1);
+}
+
+.box:nth-child(2) {
+    background: linear-gradient(45deg, #e6e6fa, #dda0dd);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bonus-box img {
+    width: 35%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ffff99, #ffe4b5);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.highlight h3 {
+    color: #ff4500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.emotional-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: linear-gradient(135deg, #fff5f8, #fff8f2);
+    border: 2px solid rgba(255, 182, 193, 0.45);
+    padding: 30px;
+    border-radius: 25px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.emotional-text {
+    flex: 1;
+}
+
+.emotional-text h3 {
+    color: #d81b60;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.emotional-text p {
+    margin: 14px 0;
+    font-size: 1.05rem;
+    color: #4b3a4b;
+    line-height: 1.6;
+}
+
+.emotional-text p strong {
+    color: #c02068;
+}
+
+.emotional-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.emotional-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.solution-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: linear-gradient(135deg, #f8fcff, #fcf8ff);
+    border: 2px solid rgba(173, 216, 230, 0.5);
+    padding: 30px;
+    border-radius: 25px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.solution-content {
+    flex: 1;
+}
+
+.solution-content h3 {
+    color: #2978b5;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.solution-content p {
+    margin: 14px 0;
+    font-size: 1.05rem;
+    color: #3f3a50;
+    line-height: 1.6;
+}
+
+.solution-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.solution-content ul li {
+    position: relative;
+    padding-left: 30px;
+    margin: 10px 0;
+    font-size: 1.05rem;
+    color: #4b3a4b;
+}
+
+.solution-content ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+}
+
+.solution-content .transition {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    color: #1f487e;
+}
+
+.solution-content .transition strong {
+    color: #1a3f6f;
+}
+
+.solution-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.solution-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.bonus-section {
+    background: linear-gradient(180deg, #fff6f8, #fff8ff);
+    border: 2px solid rgba(255, 182, 193, 0.45);
+    border-radius: 30px;
+    padding: 32px;
+    margin: 30px 0;
+    text-align: left;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.bonus-section h3 {
+    color: #d6457a;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.bonus-subtitle {
+    font-size: 1rem;
+    color: #5f415f;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.bonus-items {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+ .bonus-card {
+    flex: 1;
+    min-width: 240px;
+    background: white;
+    border-radius: 24px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.bonus-card img {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 14px;
+}
+
+.bonus-desc {
+    margin: 0;
+    color: #5b3a5b;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.bonus-value,
+.bonus-urgency {
+    margin: 16px 0 0;
+    font-size: 1.05rem;
+    color: #4f3a4f;
+}
+
+.bonus-urgency {
+    color: #c81d4f;
+    font-weight: 700;
+}
+
+.testimonials-section {
+    background: linear-gradient(180deg, #ffffff, #fff9fb);
+    border: 2px solid rgba(255, 192, 203, 0.45);
+    border-radius: 30px;
+    padding: 32px;
+    margin: 30px 0;
+    text-align: left;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.testimonials-section h3 {
+    color: #d81b60;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.testimonials-subtitle {
+    color: #5f415f;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.testimonial-card {
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.testimonial-rating {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #4d3a52;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.testimonial-author {
+    font-size: 0.95rem;
+    color: #3f2b3f;
+    margin: 0;
+}
+
+.testimonials-reinforce {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    color: #4f3a4f;
+    text-align: center;
+}
+
+.testimonials-section .btn {
+    display: block;
+    margin: 22px auto 0;
+    width: fit-content;
+}
+
+@media (max-width: 780px) {
+    .testimonial-cards {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+.btn.bonus-btn {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    background: linear-gradient(45deg, #ff8c00, #ff5cac);
+    padding: 22px 44px;
+    border-radius: 40px;
+    font-size: 22px;
+    box-shadow: 0 10px 22px rgba(255, 92, 148, 0.25);
+}
+
+.btn.bonus-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 14px 26px rgba(255, 92, 148, 0.35);
+}
+
+@media (max-width: 780px) {
+    .emotional-section {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .emotional-image {
+        order: 2;
+    }
+
+    .emotional-text {
+        order: 1;
+    }
+
+    .solution-section {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .solution-image {
+        order: 2;
+    }
+
+    .solution-content {
+        order: 1;
+    }
+
+    .bonus-items {
+        flex-direction: column;
+    }
+
+    .bonus-card {
+        width: 100%;
+    }
+}
+
+.garantia {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.garantia img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.price {
+    background-image: url('imagens/Tudo isso por R$ 19,90.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 5px solid #ffd700;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff69b4, #ffd700);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+footer {
+    background: linear-gradient(45deg, #ff69b4, #32cd32);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 0 0 20px 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1487643172773297');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1487643172773297&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="floating-icon">🌟</div>
+    <div class="floating-icon">☁️</div>
+    <div class="floating-icon">💖</div>
+    <div class="floating-icon">✨</div>
+
+<div class="logo">
+    <img src="imagens/Logo colorido e alegre _ABC Divertido_.png" alt="Logo ABC Divertido">
+</div>
+
+<h1>ABC Divertido 📚✨</h1>
+
+<h2>Ensine seu filho a ler brincando!</h2>
+
+<div class="highlight">
+    <h3>O caderno de Alfabetização</h3>
+    <p>Pronto para Imprimir e Usar HOJE!</p>
+    <p>Para crianças de 4 a 8 anos</p>
+    <p>Do alfabeto básico até formação de palavras completas</p>
+    <p>PDF pronto, imprime, monta o caderno e começa!</p>
+    <p>6 modelos de PDFs com atividades progressivas +Bonus 🎁</p>
+</div>
+
+<p>
+Um material completo com atividades prontas para imprimir que ajudam no desenvolvimento da leitura de forma leve e divertida.
+</p>
+
+<div class="emotional-section">
+    <div class="emotional-text">
+        <h3>Seu filho tem dificuldade para aprender a ler e você não sabe mais o que fazer?</h3>
+        <p>Você tenta ensinar, explica com carinho, mas ele perde a atenção, se distrai fácil ou não demonstra interesse.</p>
+        <p>Você sente que está falando com o vento: ele se frustra, você se frustra, e no final você pensa que está fazendo algo errado.</p>
+        <p><strong>E isso gera uma sensação de impotência, como se você estivesse falhando — mesmo se esforçando todos os dias.</strong></p>
+        <p><strong>A verdade é que o problema não está em você… mas na forma como o aprendizado está sendo apresentado.</strong></p>
+    </div>
+    <div class="emotional-image">
+        <img src="imagens/dor mae e filho.png" alt="Mãe preocupada ajudando filho confuso com letras">
+    </div>
+</div>
+
+<div class="solution-section">
+    <div class="solution-content">
+        <h3>Existe uma forma mais leve e divertida de ensinar seu filho a ler</h3>
+        <p>O método do ABC Divertido traz aprendizado por meio de brincadeiras, aumenta o interesse da criança, reduz a frustração da mãe e é fácil de aplicar em casa.</p>
+        <ul>
+            <li>Estimula o interesse pela leitura</li>
+            <li>Atividades simples e prontas</li>
+            <li>Ideal para crianças iniciantes</li>
+            <li>Você não precisa ser professora</li>
+        </ul>
+        <p class="transition">Foi pensando nisso que criamos o <strong>Kit Alfabetização Divertida</strong>.</p>
+    </div>
+    <div class="solution-image">
+        <img src="imagens/abc.png" alt="Produto ABC Divertido">
+    </div>
+</div>
+
+<div class="box">
+    <h3>Atividades Incríveis 🌟</h3>
+    <img src="imagens/ALFABETO TRAÇADO.png" alt="Alfabeto Traçado">
+    <img src="imagens/MOCKUP - 2.png" alt="Mockup 2">
+    <p>✔️ Atividades com traçado do alfabeto</p>
+    <p>✔️ Jogos com sílabas</p>
+    <p>✔️ Troca de letras nas palavras</p>
+</div>
+
+<a href="https://pay.kiwify.com.br/XdSqeAh" class="btn">
+Quero começar agora
+</a>
+
+<div class="bonus-section">
+    <h3>🎁 Você ainda recebe BÔNUS incríveis para acelerar o aprendizado!</h3>
+    <p class="bonus-subtitle">Além do ABC Divertido, você leva materiais extras que ajudam seu filho a evoluir ainda mais rápido — sem custo adicional!</p>
+    <div class="bonus-items">
+        <div class="bonus-card">
+            <img src="imagens/Capa do Caderno dos Números.png" alt="Caderno dos Números">
+            <p class="bonus-desc">Ajuda seu filho a desenvolver raciocínio lógico e aprender números de forma leve e divertida.</p>
+        </div>
+        <div class="bonus-card">
+            <img src="imagens/ChatGPT Image 2 de abr. de 2026, 13_39_03.png" alt="Brincadeiras Educativas">
+            <p class="bonus-desc">Transforma o aprendizado em momentos de conexão e diversão entre você e seu filho.</p>
+        </div>
+    </div>
+    <p class="bonus-value">💰 Esses bônus poderiam ser vendidos separadamente por mais de R$30, mas hoje você recebe tudo junto!</p>
+    <p class="bonus-urgency">🔥 Acesso imediato após a compra — comece hoje mesmo!</p>
+    <a href="https://pay.kiwify.com.br/XdSqeAh" class="btn bonus-btn">QUERO GARANTIR COM OS BÔNUS 🎁</a>
+</div>
+
+<div class="testimonials-section">
+    <h3>💬 Veja o que outras mães estão dizendo</h3>
+    <p class="testimonials-subtitle">Mães reais que já começaram a ensinar seus filhos de forma leve, divertida e sem estresse</p>
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Eu estava muito preocupada porque meu filho não estava conseguindo acompanhar na escola… tentei ajudar, mas não sabia por onde começar. Depois que comecei a usar o ABC Divertido, tudo mudou! Ele começou a se interessar, pedir para fazer as atividades e já está reconhecendo várias letras. Sério, foi um alívio enorme pra mim!"</p>
+            <p class="testimonial-author"><strong>Camila Souza</strong> – mãe de menino de 5 anos</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Eu sempre quis ajudar minha filha em casa, mas não sou professora e ficava insegura. O ABC Divertido é tão fácil de usar que até eu aprendi junto com ela 😂 Hoje a gente transforma o aprendizado em um momento gostoso juntas. Vale MUITO a pena!"</p>
+            <p class="testimonial-author"><strong>Juliana Martins</strong> – mãe de menina de 4 anos</p>
+        </div>
+    </div>
+    <p class="testimonials-reinforce">✨ Você também pode transformar o aprendizado do seu filho — começando hoje!</p>
+    <a href="https://pay.kiwify.com.br/XdSqeAh" class="btn">QUERO COMEÇAR COM MEU FILHO AGORA</a>
+</div>
+
+<div class="box" style="background: linear-gradient(45deg, #fffacd, #f0e68c);">
+    <h3>Ideal para Você 💖</h3>
+    <p>Mães, professores e crianças em fase de alfabetização</p>
+    <p>Recursos pedagógicos fáceis e divertidos! 🦄</p>
+</div>
+
+<div class="highlight">
+    <p>Vários modelos de atividades progressivas que levam qualquer criança do zero à leitura sem precisar ser pedagoga, sem métodos complicados, sem gastar fortunas com reforço escolar!</p>
+</div>
+
+<div class="highlight price">
+</div>
+
+<a href="https://pay.kiwify.com.br/XdSqeAh" class="btn">
+Quero o ABC Divertido 💜
+</a>
+
+<div class="garantia">
+    <img src="imagens/oVUsr.jpg" alt="Garantia">
+</div>
+
+<div class="logo-final">
+    <img src="imagens/H8mzZ.jpg" alt="Logo colorida pequena" style="width: 120px; height: auto; margin: 15px auto; display: block;">
+</div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 ABC Divertido. Todos os direitos reservados. ❤️</p>
+</footer>
+
+</body>
+</html>
