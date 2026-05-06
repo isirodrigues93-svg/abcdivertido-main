@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Material educativo ABC Divertido: Atividades para ensinar alfabetização de forma divertida e leve para crianças.">
@@ -9,7 +10,7 @@
 <style>
 body {
     margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     background-image: url('imagens/DOBRA -1.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -438,7 +439,49 @@ p {
     width: fit-content;
 }
 
+/* Tipografia Responsiva para Mobile */
 @media (max-width: 780px) {
+    h1 {
+        font-size: 32px;
+        text-shadow: 1px 1px #ffd700;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-shadow: 1px 1px #fff;
+    }
+
+    .highlight h3 {
+        font-size: 20px;
+    }
+
+    .emotional-text h3,
+    .solution-content h3,
+    .bonus-section h3,
+    .testimonials-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .emotional-text p,
+    .solution-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 16px 32px;
+        font-size: 18px;
+    }
+
+    .btn.bonus-btn {
+        font-size: 18px;
+        padding: 18px 36px;
+    }
+
     .testimonial-cards {
         flex-direction: column;
     }
